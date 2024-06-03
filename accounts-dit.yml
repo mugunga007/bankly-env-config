@@ -1,16 +1,7 @@
-server: 
-  port: 8095
-spring:
-  application:
-    name: accounts
-  datasource:
-    url: jdbc:mysql://mysql-ds:3306/bankly
-    username: root
-    password: root
-    
-  jpa:
-    show-sql: true 
-
-# MySQL
-    hibernate: 
-      ddl-auto: update
+accounts:
+  message: "Welcome to Bankly accounts related local APIs "
+  contactDetails:
+    name: "Landry - Developer"
+    email: "landry.shema@51.173.42.31.com"
+  onCallSupport:
+    - (514) 641-5166

@@ -22,7 +22,7 @@ management:
       exposure:
         include: "*"
 loan:
-  a
+  accountsApiUrl: http://accounts-service:8095/api/v1/customer
   message: "DIT APIs for LOAN"
   contactDetails:
     name: "Dev Team"

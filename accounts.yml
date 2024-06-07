@@ -1,3 +1,18 @@
+spring:
+  application:
+    name: accounts
+  #local;
+  datasource:
+    url: jdbc:mysql://localhost:3306/bankly
+    username: root
+    password: root
+  jpa:
+    show-sql: true 
+
+# MySQL
+    hibernate: 
+      ddl-auto: update
+      
 accounts:
   message: "Welcome to Bankly accounts related local APIs "
   contactDetails:
@@ -7,3 +22,4 @@ accounts:
     - (514) 641-5166
 server:
   port: 8095
+

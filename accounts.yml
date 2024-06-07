@@ -12,7 +12,18 @@ spring:
 # MySQL
     hibernate: 
       ddl-auto: update
-      
+management:
+  health:
+    defaults:
+      enabled: true
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true      
 accounts:
   message: "Welcome to Bankly accounts related local APIs "
   contactDetails:

@@ -1,4 +1,5 @@
 database_name: bankly
+database_url: "{cipher}878e1698d98da9be34a8feda65d89d2d909b8827ff0618e067df81906a5a5a0616381c067431d61658d2cc5e19c6d7cd"
 server:
   port: 8095
 spring:
@@ -6,7 +7,7 @@ spring:
     name: accounts
   #local;
   datasource:
-    url: "{cipher}878e1698d98da9be34a8feda65d89d2d909b8827ff0618e067df81906a5a5a0616381c067431d61658d2cc5e19c6d7cd"${database_name}
+    url: ${database_url}${database_name}
     username: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
     password: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
   jpa:

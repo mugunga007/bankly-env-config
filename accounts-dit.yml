@@ -16,11 +16,7 @@ spring:
 # MySQL
     hibernate: 
       ddl-auto: update
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+
 accounts:
   message: "DIT APIs for ACCOUNTS"
   contactDetails:

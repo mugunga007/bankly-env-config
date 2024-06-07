@@ -4,8 +4,8 @@ spring:
   #local;
   datasource:
     url: jdbc:mysql://localhost:3306/bankly
-    username: root
-    password: root
+    username: 98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0
+    password: 98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0
   jpa:
     show-sql: true 
 

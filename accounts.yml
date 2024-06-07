@@ -5,3 +5,5 @@ accounts:
     email: "landry.shema@51.173.42.31.com"
   onCallSupport:
     - (514) 641-5166
+server:
+  port: 8095

@@ -22,7 +22,7 @@ management:
       exposure:
         include: "*"
 accounts:
-  message: "Welcome to Bankly accounts related local APIs "
+  message: "DIT APIs for ACCOUNTS"
   contactDetails:
     name: "Dev Team"
     email: "dev.team@bankly-wester.com"

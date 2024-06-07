@@ -28,7 +28,7 @@ accounts:
   message: "Welcome to Bankly accounts related local APIs "
   contactDetails:
     name: "Landry - QA"
-    email: "landry.shema@51.173.42.31.com"
+    email: "afd41d8bf81c497e2e14ba0bda81e6d5119bc0201736b38ac16fe6df67c38a16808fd35fae09ee0d220a410a6680ab2f"
   onCallSupport:
     - (514) 641-5166
 server:

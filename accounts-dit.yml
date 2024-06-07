@@ -24,7 +24,7 @@ management:
 accounts:
   message: "Welcome to Bankly accounts related local APIs "
   contactDetails:
-    name: "Landry - DIT"
+    name: "Dev Team"
     email: "landry.shema@bankly-wester.com"
   onCallSupport:
     - (514) 641-5166

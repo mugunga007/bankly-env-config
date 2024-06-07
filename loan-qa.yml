@@ -21,7 +21,8 @@ management:
     web:
       exposure:
         include: "*"
-accounts:
+loan:
+  accountsApiUrl: http://accounts-service:8095/api/v1/customer
   message: "QA APIs for LOAN"
   contactDetails:
     name: "Dev Team"

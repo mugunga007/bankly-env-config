@@ -1,7 +1,7 @@
 database_name: bankly_loan
 database_url: "{cipher}878e1698d98da9be34a8feda65d89d2d909b8827ff0618e067df81906a5a5a0616381c067431d61658d2cc5e19c6d7cd"
 server:
-  port: 8095
+  port: 8090
 spring:
   application:
     name: loan

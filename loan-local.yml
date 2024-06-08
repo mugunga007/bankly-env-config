@@ -23,7 +23,7 @@ management:
         include: "*"
 loan:
   accountsApiUrl: http://localhost:8095/api/v1/customer
-  message: "DIT APIs for LOAN"
+  message: "Local APIs for LOAN"
   contactDetails:
     name: "Loan Dev Team"
     email: "dev.team@bankly-wester.com"

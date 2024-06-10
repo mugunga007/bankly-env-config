@@ -25,7 +25,7 @@ loan:
   accountsApiUrl: http://accounts-service:8095/api/v1/customer
   message: "DIT APIs for LOAN"
   contactDetails:
-    name: "Dev Team"
+    name: "Dev @ Support Team"
     email: "dev.team@bankly-wester.com"
   onCallSupport:
     - (514) 641-5166

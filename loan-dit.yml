@@ -7,7 +7,7 @@ spring:
     name: loan
   #local;
   datasource:
-    url: jdbc:mysql://loandb:3307/bankly_loan
+    url: jdbc:mysql://loandb:3306/bankly_loan
     username: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
     password: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
   jpa:

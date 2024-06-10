@@ -1,5 +1,5 @@
 database_name: bankly
-database_url: "{cipher}0c2053a972c43c39b8835dbb648a26853559b9aaeb3145f54074f2dcf07b7191bf2ed9a7dd111069b6e179f1550c1662"
+#database_url: "{cipher}0c2053a972c43c39b8835dbb648a26853559b9aaeb3145f54074f2dcf07b7191bf2ed9a7dd111069b6e179f1550c1662"
 server:
   port: 8095
 spring:
@@ -7,7 +7,7 @@ spring:
     name: accounts
   #local;
   datasource:
-    url: ${database_url}${database_name}
+    url: jdbc:mysql:accountsdb:3306/bankly
     username: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
     password: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
   jpa:

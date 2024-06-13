@@ -12,7 +12,20 @@ spring:
     password: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
   jpa:
     show-sql: true 
-
+  cloud:
+    function:
+      definition: updateCommunication
+    stream:
+      bindings:
+        updateCommunication-in-0:
+          destination: communication-sent
+          group: ${spring.application.name}
+        sendCommunication-out-0:
+          destination: send-communication
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
 # MySQL
     hibernate: 
       ddl-auto: update

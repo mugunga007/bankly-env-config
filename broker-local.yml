@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: broker
+  cloud:
+    function:
+      definition: accountDetails
+    stream:
+      bindings:
+        accountDetails-in-0:
+          destination: send-communication
+          group: ${spring.application.name}
+        accountDetails-out-0:
+          destination: communications-sent
+
+  rabbitmq:
+    host: rabbitmq-service
+    port: 5672
+    username: guest
+    password: guest
+    connection-timeout: 10s
+
+server:
+  port: 9090

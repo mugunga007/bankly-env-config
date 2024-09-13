@@ -21,6 +21,18 @@ management:
     web:
       exposure:
         include: "*"
+
+  cloud:
+    stream:
+      bindings:
+        sendCommunication-out-0:
+          destination: send-communication   
+  rabbitmq:
+    host: "rabbitmq-service"
+    port: 5672
+    username: "guest"
+    password: "guest"
+    
 loan:
   accountsApiUrl: http://accounts-service:8095/api/v1/customer
   message: "DIT APIs for LOAN"
@@ -29,3 +41,4 @@ loan:
     email: "dev.team@bankly-wester.com"
   onCallSupport:
     - (514) 641-5166
+  defaultBranchId: 1000

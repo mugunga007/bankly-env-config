@@ -26,7 +26,7 @@ spring:
           destination: communications-sent
           group: ${spring.application.name}
 
-        createTransactionDetails-out-0:
+        bankTransactionDetails-out-0:
           destination: send-communication
   rabbitmq:
     host: "rabbitmq-service"

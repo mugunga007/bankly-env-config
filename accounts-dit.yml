@@ -58,3 +58,4 @@ accounts:
   onCallSupport:
     - (514) 641-5166
   defaultBranchId: 1000
+  bindingsCreateTransaction: createTransactionDetails

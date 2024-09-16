@@ -5,17 +5,17 @@ server:
 spring:
   application:
     name: loan
-  #local;
+#-------- DATASOURCE CONFIGS --------------
   datasource:
     url: jdbc:mysql://loandb:3306/bankly_loan
     username: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
     password: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
   jpa:
     show-sql: true 
-
-# MySQL
     hibernate: 
       ddl-auto: update
+
+#-------- CLOUD CONFIGS, RABBITMQ --------------
   cloud:
     stream:
       bindings:
@@ -26,15 +26,23 @@ spring:
     port: 5672
     username: "guest"
     password: "guest"
-    
+
+#-------- ACTUATOR & OBSERVABILITY CONFIGS --------------
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+management:
+  endpoint:
+    health:
+      show-details: always
+management:
+  tracing:
+    sampling:
+      probability: 1.0
 
-
-    
+#-------- ENV VARIABLES CONFIGS --------------    
 loan:
   accountsApiUrl: http://accounts-service:8095/api/v1/customer
   message: "DIT APIs for LOAN"

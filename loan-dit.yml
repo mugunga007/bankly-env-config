@@ -16,12 +16,6 @@ spring:
 # MySQL
     hibernate: 
       ddl-auto: update
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
   cloud:
     stream:
       bindings:
@@ -32,6 +26,14 @@ management:
     port: 5672
     username: "guest"
     password: "guest"
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
     
 loan:
   accountsApiUrl: http://accounts-service:8095/api/v1/customer

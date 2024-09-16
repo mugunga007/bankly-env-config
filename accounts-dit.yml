@@ -26,6 +26,8 @@ spring:
           destination: communications-sent
           group: ${spring.application.name}
 
+        createTransactionDetails-out-0:
+          destination: send-communication
   rabbitmq:
     host: "rabbitmq-service"
     port: 5672

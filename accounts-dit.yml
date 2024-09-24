@@ -19,13 +19,17 @@ spring:
 #-------- CLOUD CONFIGS, RABBITMQ --------------
   cloud:
     function:
-      definition: createNewAccount
+      definition: createNewAccount;createBankTransaction
     stream:
       bindings:
         createNewAccount-in-0:
           destination: accounts-details-topic
           group: ${spring.application.name}
 
+        createBankTransaction-in-0:
+          destination: transaction-details-out-topic
+          group: ${spring.application.name}
+          
         bankTransactionDetails-out-0:
           destination: bank-transaction-topic
   rabbitmq:

@@ -27,7 +27,7 @@ spring:
           group: ${spring.application.name}
 
         bankTransactionDetails-out-0:
-          destination: send-communication
+          destination: bank-transaction-topic
   rabbitmq:
     host: "rabbitmq-service"
     port: 5672

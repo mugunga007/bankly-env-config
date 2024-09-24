@@ -30,7 +30,7 @@ spring:
           destination: transaction-details-out-topic
           group: ${spring.application.name}
           
-        bankTransactionDetails-out-0:
+        bankTransactionDetailsOut-out-0:
           destination: bank-transaction-topic
   rabbitmq:
     host: "rabbitmq-service"
@@ -62,4 +62,4 @@ accounts:
   onCallSupport:
     - (514) 641-5166
   defaultBranchId: 1000
-  bindingsCreateTransaction: bankTransactionDetails-out-0
+  bindingsCreateTransaction: bankTransactionDetailsOut-out-0

@@ -23,7 +23,7 @@ spring:
     stream:
       bindings:
         createNewAccount-in-0:
-          destination: communications-sent
+          destination: accounts-details-topic
           group: ${spring.application.name}
 
         bankTransactionDetails-out-0:

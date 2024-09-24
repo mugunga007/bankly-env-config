@@ -6,18 +6,21 @@ spring:
 #-------- CLOUD CONFIGS, RABBITMQ --------------
   cloud:
     function:
-      definition: accountDetails
+      definition: accountDetails;bankTransactionDetails
     stream:
       bindings:
         accountDetails-in-0:
           destination: send-communication
           group: ${spring.application.name}
+          
+        bankTransactionDetails-in-0:
+          destination: bank-transaction-topic
+          group: ${spring.application.name}
+          
         accountDetails-out-0:
           destination: communications-sent
 
-        bankTransactionDetails-in-0:
-          destination: send-communication
-          group: ${spring.application.name}
+
   rabbitmq:
     host: rabbitmq-service
     port: 5672

@@ -20,7 +20,8 @@ spring:
         accountDetails-out-0:
           destination: accounts-details-topic
 
-
+        bankTransactionDetails-out-0:
+          destination: transaction-details-out-topic      
   rabbitmq:
     host: rabbitmq-service
     port: 5672

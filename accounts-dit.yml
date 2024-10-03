@@ -15,7 +15,12 @@ spring:
 # MySQL
     hibernate: 
       ddl-auto: update    
-
+#-------- OAUTH2 SECURITY CONFIGURATION ------------
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://47.76.238.219:8070/realms/master/protocol/openid-connect/certs
 #-------- CLOUD CONFIGS, RABBITMQ --------------
   cloud:
     function:

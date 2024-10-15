@@ -4,7 +4,7 @@ database_name: bankly
 #database_url: "{cipher}0c2053a972c43c39b8835dbb648a26853559b9aaeb3145f54074f2dcf07b7191bf2ed9a7dd111069b6e179f1550c1662"
 spring:
   application:
-    name: accounts
+    name: bankly-accounts-service
 #-------- DATASOURCE CONFIGS --------------
   datasource:
     url: jdbc:mysql://accountsdb:3306/bankly

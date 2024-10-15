@@ -1,0 +1,70 @@
+server:
+  port: 8095
+database_name: bankly
+#database_url: "{cipher}0c2053a972c43c39b8835dbb648a26853559b9aaeb3145f54074f2dcf07b7191bf2ed9a7dd111069b6e179f1550c1662"
+spring:
+  application:
+    name: accounts
+#-------- DATASOURCE CONFIGS --------------
+  datasource:
+    url: jdbc:mysql://accountsdb:3306/bankly
+    username: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
+    password: "{cipher}98a05d32a1c9a667ecf992e213c640eab92bdafb77a0dd8db156e3d3b092cfc0"
+  jpa:
+    show-sql: true 
+# MySQL
+    hibernate: 
+      ddl-auto: update    
+#-------- OAUTH2 SECURITY CONFIGURATION ------------
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://47.76.238.219:8070/realms/master/protocol/openid-connect/certs
+#-------- CLOUD CONFIGS, RABBITMQ --------------
+  cloud:
+    function:
+      definition: createNewAccount;createBankTransaction
+    stream:
+      bindings:
+        createNewAccount-in-0:
+          destination: accounts-details-topic
+          group: ${spring.application.name}
+
+        createBankTransaction-in-0:
+          destination: transaction-details-out-topic
+          group: ${spring.application.name}
+          
+        bankTransactionDetailsOut-out-0:
+          destination: bank-transaction-topic
+  rabbitmq:
+    host: "rabbitmq-service"
+    port: 5672
+    username: "guest"
+    password: "guest"
+    
+#-------- ACTUATOR & OBSERVABILITY CONFIGS --------------
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: always
+
+  tracing:
+    sampling:
+      probability: 1.0
+
+#-------- ENV VARIABLES CONFIGS --------------
+accounts:
+  message: "DIT APIs for ACCOUNTS"
+  contactDetails:
+    name: "DEV TEAM"
+    email: "dev.team@bankly-wester.com"
+  onCallSupport:
+    - (514) 641-5166
+  defaultBranchId: 1000
+  bindingsCreateTransaction: bankTransactionDetailsOut-out-0
